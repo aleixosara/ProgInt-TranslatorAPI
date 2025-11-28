@@ -17,7 +17,7 @@
     "minion"
   ];
 
-  async function translate() {
+  async function translate()
     output = "";
     error = "";
 
