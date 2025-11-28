@@ -2,8 +2,6 @@
   let input = "";
   let output = "";
   let error = "";
-<<<<<<< HEAD
-=======
   let translationType = "yoda";
 
   // opções válidas da FunTranslations
@@ -18,13 +16,11 @@
     "vulcan",
     "minion"
   ];
->>>>>>> ba16333bbf51b68aba32c991103639af2314b1da
 
   async function translate() {
     output = "";
     error = "";
 
-<<<<<<< HEAD
     try {
       // IMPORTANTE: GET COM TEXTO NA URL
       const url =
@@ -33,7 +29,6 @@
 
       const res = await fetch(url);
 
-=======
     if (!input.trim()) {
       error = "Digite algo antes, né 💀";
       return;
@@ -45,7 +40,6 @@
         encodeURIComponent(input);
 
       const res = await fetch(url);
->>>>>>> ba16333bbf51b68aba32c991103639af2314b1da
       const data = await res.json();
 
       if (data.error) {
@@ -54,18 +48,14 @@
       }
 
       output = data.contents.translated;
-<<<<<<< HEAD
     } catch (e) {
       error = "Erro ao conectar 😭 (provavelmente CORS)";
-=======
     } catch (err) {
       error = "Erro ao conectar 😭 (CORS ou limite da API)";
->>>>>>> ba16333bbf51b68aba32c991103639af2314b1da
     }
   }
 </script>
 
-<<<<<<< HEAD
 <h1>Tradutor Yoda</h1>
 
 <input bind:value={input} placeholder="Digite algo" />
@@ -78,7 +68,6 @@
 {#if error}
   <p style="color:red;">{error}</p>
 {/if}
-=======
 <h1>Fun Translator 💬✨</h1>
 
 <div class="card">
@@ -128,4 +117,3 @@
     font-size: 1.2rem;
   }
 </style>
->>>>>>> ba16333bbf51b68aba32c991103639af2314b1da
